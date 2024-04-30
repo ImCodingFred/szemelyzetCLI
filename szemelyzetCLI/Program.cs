@@ -16,22 +16,23 @@ namespace szemelyzetCLI
             sr.Close();
             Console.WriteLine($"3. feladat: {dolgozok.Count} dolgozó van az állományban");
             Console.WriteLine($"4. feladat: {dolgozok.Average(x=>x.fizetes)} Ft a dolgozók átlagbére");
-            Dictionary<string, int> telephelyek = new Dictionary<string, int>();
-            foreach (var dolgozo in dolgozok)
-            {
-                if (!telephelyek.ContainsKey(dolgozo.telephely))
-                {
-                    telephelyek.Add(dolgozo.telephely, 1);
-                }
-                else
-                {
-                    telephelyek[dolgozo.telephely]++;
-                }
-            }
+            //Dictionary<string, int> telephelyek = new Dictionary<string, int>();
+            //foreach (var dolgozo in dolgozok)
+            //{
+            //    if (!telephelyek.ContainsKey(dolgozo.telephely))
+            //    {
+            //        telephelyek.Add(dolgozo.telephely, 1);
+            //    }
+            //    else
+            //    {
+            //        telephelyek[dolgozo.telephely]++;
+            //    }
+            //}
+            var telephelyek = dolgozok.GroupBy(x => x.telephely).Select(x => new { x.Key, telepdolgoz = x.Count() });
             Console.WriteLine($"5. feladat:");
             foreach (var telephely in telephelyek)
             {
-                Console.WriteLine($"\t{telephely.Key}: {telephely.Value} dolgozó");
+                Console.WriteLine($"\t{telephely.Key}: {telephely.telepdolgoz} dolgozó");
             }
 
             //Dictionary<string, int> beszotber = new Dictionary<string, int>();
@@ -47,8 +48,7 @@ namespace szemelyzetCLI
 
             //    }
             //}
-            var beosztber = dolgozok.GroupBy(x => x.telephely).Select(x => new { x.Key, Osszber = x.Sum(x => x.fizetes) });
-
+            var beosztber = dolgozok.GroupBy(x => x.beosztas).Select(x => new { x.Key, Osszber = x.Sum(x => x.fizetes) });
             Console.WriteLine($"6. feladat:");
             foreach (var beosztas in beosztber)
             {

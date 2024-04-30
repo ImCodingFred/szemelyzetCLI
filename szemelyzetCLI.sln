@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "szemelyzetCLI", "szemelyzetCLI\szemelyzetCLI.csproj", "{FAC00B47-769F-42E5-93A4-83CAE63AE2FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "szemelyzetCLI", "szemelyzetCLI\szemelyzetCLI.csproj", "{FAC00B47-769F-42E5-93A4-83CAE63AE2FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "szemelyzetGUI", "szemelyzetGUI\szemelyzetGUI.csproj", "{BF0AEFA5-C416-49A8-9F2D-158DFD194C90}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{FAC00B47-769F-42E5-93A4-83CAE63AE2FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FAC00B47-769F-42E5-93A4-83CAE63AE2FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FAC00B47-769F-42E5-93A4-83CAE63AE2FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF0AEFA5-C416-49A8-9F2D-158DFD194C90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF0AEFA5-C416-49A8-9F2D-158DFD194C90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF0AEFA5-C416-49A8-9F2D-158DFD194C90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF0AEFA5-C416-49A8-9F2D-158DFD194C90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
